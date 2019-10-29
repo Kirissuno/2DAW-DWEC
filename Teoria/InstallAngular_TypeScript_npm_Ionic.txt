@@ -24,12 +24,11 @@ sudo apt install nodejs
   509  nodejs -v
   510  npm --version
   511  ng -version
-  512  npm install -g ionic
-  513  sudo npm install -g ionic
   514  sudo apt install -g jshint
   515  sudo npm apt install -g jshint
   516  npm install -g jshint
   517  sudo npm install -g jshint
+sudo npm install -g ionic cordova
 ionic serve -o (iniciar proyecto en web)
 ionic serve --lab (para visualizar en cada plataforma)
 ionic start 'name' tabs (crear proyecto con tabs)
