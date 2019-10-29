@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Superheroes</title>
+</head>
+<body>
+    <div align="center">
+        <legend>Superhéroes</legend>
+            <table border="1" id="table">
+                <tr>
+                    <th>NAME</th>
+                    <th>GENDER</th>
+                    <th>FIGHTING SKILLS</th>
+                </tr>
+            </table>
+            
+    </div>
+    <div align="center">
+        <select name="select" id="select"></select>
+        </select>
+        <input type="submit" id="submit" value="Get Data">
+    </div>
+    <div align="center">
+        <table border="1" id="tableFilter">
+            <tr>
+                <th>NAME</th>
+                <th>ALIGNMENT</th>
+                <th>GENDER</th>
+            </tr>
+        </table>
+    </div>
+    <div align="center">
+        <select name="selectFilter" id="selectFilter">
+            <option value="Good">Good</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Bad">Bad</option>
+        </select>
+        <input type="radio" id="male" name="gender" value="Male">Male</input>
+        <input type="radio" id="female" name="gender" value="Female">Female</input>
+        <input type="submit" id="submitFilter" value="Filter">
+    </div>
+    <script src="superheroes.js"></script>
+</body>
+</html>

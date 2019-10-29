@@ -1,0 +1,108 @@
+body{
+    background-image: url("./imagenes/imagenes/Fondo.jpg");
+}
+
+.game{
+    color: aliceblue;
+    float: center;
+    
+}
+
+.tablero{
+    margin-left: 35px;
+    margin-top: 15px;
+    height: 480px;
+    width: 1009px;
+}
+
+.player{
+    float: left;
+    margin-left: 150px;
+}
+
+.bank{
+    float: right;
+    margin-right: 225px;
+}
+
+#winner{
+    margin-left: 170px;
+    text-decoration-line: underline;
+    float: center;
+    
+}
+
+#button{
+    float: left;
+    margin-left: 50px;
+}
+
+.img{
+    width: 800px;
+    height: 500px;
+    top: 100px;
+    left: 22%;
+    position: absolute;
+    border-radius: 10%;
+    z-index: -1;
+}
+
+.cartaPlayer{
+
+    height: 400px;
+    width: 400px;
+    margin-left: 650px;
+    margin-top: 100px;
+}
+
+
+.img2{
+    width: 50%;
+    margin-left: -350px;
+    z-index: 1;
+
+}
+.img2-1{
+    width: 30%;
+    margin-left: 10px;
+    z-index: 1;
+
+}
+
+#cartita{
+    margin-left: -350px;
+}
+
+.cartaBank{
+
+    height: 400px;
+    width: 400px;
+    margin-left: 300px;
+    margin-top: -402px;
+}
+
+
+
+.img3{
+    width: 50%;
+    z-index: 1;
+    margin-left: 550px;
+
+}
+
+.img3-1{
+    width: 30%;
+    margin-left: 415px;
+    margin-top: -320px;
+    margin-bottom: 20px;
+    z-index: 1;
+
+}
+
+#cartitaBank{
+    margin-left: 415px;
+}
+
+#reiniciar{
+    margin-left: 45em;
+}

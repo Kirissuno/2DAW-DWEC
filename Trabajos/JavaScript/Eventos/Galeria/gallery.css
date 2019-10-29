@@ -1,0 +1,25 @@
+.gallery-item{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.gallery-red{
+    background: red;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.gallery{
+    width: 800px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}

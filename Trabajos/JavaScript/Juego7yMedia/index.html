@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>7 y Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game">
+        <input type="button" id="button" class="button" value="Me planto" onclick="banco()">
+        <div class="player">
+            <b>Total Jugador: </b>
+            <b id="pointsPlayer">0</b>
+        </div>
+        <a align = "center" id="winner"> LAS 7 Y MEDIA</a>
+        <div class="bank">
+            <b>Total banca: </b>
+            <b id = "pointsBank">0</b>
+        </div>
+        <div class="tablero" id="tablero">
+            <div class="cartaPlayer" id="cartaPlayer">
+                <img src="imagenes/imagenes/trasera_jug.jpg"class="img2" id="img2">
+                <img src = "" class="img2-1" id="img2-1">
+                <div class = "cartita" id = "cartita">
+                    <table id="tabla">
+                        <tr id="tr">
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="cartaBank">
+                <img src="imagenes/imagenes/trasera.jpg"class="img3" id="img3">
+                <img src=""class="img3-1" id="img3-1">
+                <div class = "cartitaBank" id = "cartitaBank">
+                    <table id="tablaBank">
+                        <tr id="trBank">
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="imagenes/imagenes/fondoPiedra.jpg"class="img" id="img">
+
+    <input type="button" id="reiniciar" onclick="reiniciar()" value="Reiniciar">
+    <script type="text/javascript" src="game.js"></script>
+</body>
+</html>

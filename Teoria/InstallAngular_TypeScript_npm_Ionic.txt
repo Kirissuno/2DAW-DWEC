@@ -1,0 +1,37 @@
+sudo apt install nodejs
+  487  npm
+  488  nodejs -v
+  489  sudo apt update
+  490  sudo apt install npm
+  491  npm -v
+  492  npm install -g typescript
+  493  sudo npm install -g typescript
+  494  tsc --version
+  495  sudo npm install -g @angular/cli
+  496  ng -version
+  497  sudo apt update
+  498  sudo apt upgrade
+  499  sudo apt update
+  500  nodejs -v
+  501  npm --version
+  502  ng -version
+  503  sudo apt install curl
+  504  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+  505  sudo apt install -y nosejs
+  506  nosejs -v
+  507  nodejs -v
+  508  sudo apt install -y nodejs
+  509  nodejs -v
+  510  npm --version
+  511  ng -version
+  512  npm install -g ionic
+  513  sudo npm install -g ionic
+  514  sudo apt install -g jshint
+  515  sudo npm apt install -g jshint
+  516  npm install -g jshint
+  517  sudo npm install -g jshint
+ionic serve -o (iniciar proyecto en web)
+ionic serve --lab (para visualizar en cada plataforma)
+ionic start 'name' tabs (crear proyecto con tabs)
+
+ionic cordova plataform add android (se ejecuta dentro de la carpeta del proyecto para añadir los plugins de android)
