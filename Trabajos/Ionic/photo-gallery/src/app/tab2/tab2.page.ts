@@ -9,10 +9,10 @@ import { PhotoService } from '../services/photo.service';
 export class Tab2Page {
   currentImage: any;
 
-  constructor(public photoService: PhotoService) {}
+  constructor(public photoService: PhotoService) {  }
 
   ngOnInit() {
     this.photoService.loadSaved();
   }
-}
 
+}
