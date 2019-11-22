@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MaterialsService } from '../materials.service';
+import { NavController } from '@ionic/angular';
+import { Material } from '../models/material.model';
 
 @Component({
   selector: 'app-material-detail',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaterialDetailPage implements OnInit {
 
-  constructor() { }
+  public loadedMaterial: Material;
+
+  constructor(private materialSrvc: MaterialsService, private route: ActivatedRoute, private navCtrl: NavController) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(paramMap => {
+      if (!paramMap.has('materialId')) {
+        this.navCtrl.navigateBack('/materials');
+        return;
+      }
+      this.materialSrvc.getMaterial(paramMap.get('materialId')).subscribe(material => {
+        this.loadedMaterial = material;
+      });
+    });
   }
 
 }
