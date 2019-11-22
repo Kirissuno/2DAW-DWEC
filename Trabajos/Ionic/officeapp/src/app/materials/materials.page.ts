@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Material } from '../models/material.model';
 import { MaterialsService } from '../materials.service';
 import { IonItemSliding } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-materials',
@@ -20,7 +21,7 @@ export class MaterialsPage implements OnInit {
     });
   }
 
-  onEditOffer(materialId: string, slidingItem: IonItemSliding){
+  onEditOffer(materialId: string, slidingItem: IonItemSliding) {
     this.router.navigate(['/', 'materials', 'edit', materialId]);
     slidingItem.close();
   }
