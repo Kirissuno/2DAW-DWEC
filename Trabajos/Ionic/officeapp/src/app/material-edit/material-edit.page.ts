@@ -45,4 +45,8 @@ export class MaterialEditPage implements OnInit {
     });
   }
 
+  editMaterial(){
+    
+  }
+
 }
