@@ -16,6 +16,10 @@ const routes: Routes = [
       {
         path: 'edit/:materialId',
         loadChildren: () => import('./material-edit/material-edit.module').then( m => m.MaterialEditPageModule)
+      },
+      {
+        path: 'buy/:materialId',
+        loadChildren: () => import('./material-buy/material-buy.module').then( m => m.MaterialBuyPageModule)
       }
     ]
   },
