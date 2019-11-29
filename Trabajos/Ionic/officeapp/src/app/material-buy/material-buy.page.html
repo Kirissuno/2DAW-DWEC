@@ -36,14 +36,14 @@
                 <ion-col>
                     <ion-item>
                         <ion-label position="floating">Cantidad a Comprar</ion-label>
-                        <ion-input type="number" id="cantidadComprar"></ion-input>
+                        <ion-input [(ngModel)]="cantidadComprar" type="number" (change)="capturar()"></ion-input>
                     </ion-item>
                 </ion-col>
             </ion-row>
             <ion-row>
                 <ion-col>
                     <ion-item>
-                        <ion-label position="floating">Precio Total</ion-label>
+                        <ion-label position="floating">Precio Total: </ion-label>
                         <p>
                             <ion-input type="text" id="precioTotal"></ion-input>
                     </ion-item>
@@ -52,3 +52,28 @@
         </ion-grid>
     </form>
 </ion-content>
+
+<!--
+<select [(ngModel)]="opcionSeleccionado" (change)="capturar()">
+    <option value="0">Selecciona una opción</option>
+    <option *ngFor="let dato of datos">
+      {{dato}}
+    </option>
+</select>
+
+export class AppComponent  {
+  datos;
+  // Seleccionamos o iniciamos el valor '0' del <select>
+  opcionSeleccionado: string  = '0';
+  verSeleccion: string        = '';
+
+  constructor(){
+      this.datos = [1,2,3,4,5,6,7,8,9,10];
+  }  
+
+  capturar() {
+      // Pasamos el valor seleccionado a la variable verSeleccion
+      this.verSeleccion = this.opcionSeleccionado;
+  }
+}
+-->

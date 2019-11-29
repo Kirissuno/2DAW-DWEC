@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MaterialsService } from '../materials.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -18,9 +18,8 @@ export class MaterialBuyPage implements OnInit {
   constructor(
     private materialSrvc: MaterialsService,
     private route: ActivatedRoute, private navCrtl: NavController, private toastCtrl: ToastController, private router: Router) { }
-
   ngOnInit() {
-    this.route.paramMap.subscribe(paramMap =>{
+    this.route.paramMap.subscribe(paramMap => {
       if (!paramMap.has('materialId')) {
         this.navCrtl.navigateBack('/materials');
         return;
