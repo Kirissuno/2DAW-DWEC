@@ -38,16 +38,25 @@ export class MaterialBuyPage implements OnInit {
     });
   }
 
+  sumar() {
+    let sumando = 0;
+    let precio : number = parseInt(document.getElementById('precio').textContent);
+    let cantidad = document.getElementById('cantidadSumar').value;
+    
+    sumando = sumando + (cantidad * precio);
+    document.getElementById('precioTotal').innerHTML = sumando.toString() + '€';
+  }
+
   buyMaterial() {
-    this.materialSrvc.updateMaterial(
-      this.loadedMaterial.id, this.form.value.title, this.form.value.description, this.form.value.quantity, this.form.value.price)
+    this.materialSrvc.sumMaterial(
+      this.loadedMaterial.id)
     .subscribe(() => {
       this.toastCtrl.create({
         animated: true,
         duration: 4000,
         position: 'top',
         showCloseButton: true,
-        message: 'Compra realizada correctamente'
+        message: 'El elemento se compró correctamente'
       }).then(toastEl => {
         toastEl.present();
         this.router.navigate(['/materials']);

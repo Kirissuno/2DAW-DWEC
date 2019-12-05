@@ -102,4 +102,30 @@ export class MaterialsService {
       })
     );
   }
+
+  sumMaterial(
+    materialId: string,
+  ) {
+    let updatedMaterials: Material[];
+    return this.materials.pipe(
+      take(1),
+      tap(materials => {
+        const updateMaterialIndex = materials.findIndex(
+          ml => ml.id === materialId
+        );
+        updatedMaterials = [...materials];
+        const oldMaterial = updatedMaterials[updateMaterialIndex];
+        const cantidad = document.getElementById('cantidadSumar').textContent;
+        updatedMaterials[updateMaterialIndex] = new Material(
+          oldMaterial.id,
+          oldMaterial.name,
+          oldMaterial.description,
+          parseInt(cantidad) + oldMaterial.quantity,
+          oldMaterial.price,
+          oldMaterial.image
+        );
+        this._materials.next(updatedMaterials);
+      })
+    );
+  }
 }

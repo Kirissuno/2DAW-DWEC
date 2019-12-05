@@ -35,8 +35,17 @@
             <ion-row>
                 <ion-col>
                     <ion-item>
+                        <p>
+                            <strong id="precio">{{ loadedMaterial.price }} €/unidad</strong>
+                        </p>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <ion-item>
                         <ion-label position="floating">Cantidad a Comprar</ion-label>
-                        <ion-input [(ngModel)]="cantidadComprar" type="number" (change)="capturar()"></ion-input>
+                        <ion-input type="number" id="cantidadSumar" (click)='sumar()' min="0"></ion-input>
                     </ion-item>
                 </ion-col>
             </ion-row>
@@ -49,14 +58,17 @@
                     </ion-item>
                 </ion-col>
             </ion-row>
+            <ion-button (click)="buyMaterial()" [disabled]="!form.valid">
+                <ion-button [routerLink]="['/', 'materials']">Comprar</ion-button>
+            </ion-button>
         </ion-grid>
     </form>
 </ion-content>
 
 <!--
-<select [(ngModel)]="opcionSeleccionado" (change)="capturar()">
-    <option value="0">Selecciona una opción</option>
-    <option *ngFor="let dato of datos">
+<select [(ngModel)]="opcionSeleccionado " (change)="capturar() ">
+    <option value="0 ">Selecciona una opción</option>
+    <option *ngFor="let dato of datos ">
       {{dato}}
     </option>
 </select>
