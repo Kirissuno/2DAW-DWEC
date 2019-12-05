@@ -40,10 +40,10 @@ export class MaterialBuyPage implements OnInit {
 
   sumar() {
     let sumando = 0;
-    let precio : number = parseInt(document.getElementById('precio').textContent);
-    let cantidad = document.getElementById('cantidadSumar').value;
+    const precio: number = parseInt(document.getElementById('precio').textContent);
+    const cantidad = (document.getElementById('cantidadSumar') as HTMLInputElement).value;
     
-    sumando = sumando + (cantidad * precio);
+    sumando = sumando + (parseInt(cantidad) * precio);
     document.getElementById('precioTotal').innerHTML = sumando.toString() + '€';
   }
 

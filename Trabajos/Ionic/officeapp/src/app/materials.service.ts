@@ -115,7 +115,7 @@ export class MaterialsService {
         );
         updatedMaterials = [...materials];
         const oldMaterial = updatedMaterials[updateMaterialIndex];
-        const cantidad = document.getElementById('cantidadSumar').textContent;
+        const cantidad = (document.getElementById('cantidadSumar') as HTMLInputElement).value;
         updatedMaterials[updateMaterialIndex] = new Material(
           oldMaterial.id,
           oldMaterial.name,
