@@ -48,9 +48,10 @@
 
         function preload() {
             this.load.image('sky', 'assets/world.jpg');
+            this.load.image('baby', 'assets/baby.png');
             this.load.image('ground', 'assets/platform.png');
-            this.load.image('star', 'assets/star.png');
-            this.load.image('bomb', 'assets/bomb.png');
+            this.load.image('star', 'assets/face.png');
+            this.load.image('bomb', 'assets/llamasConSombrero.png');
             this.load.spritesheet('dude', 'assets/llama.png', {
                 frameWidth: 48,
                 frameHeight: 48
@@ -58,6 +59,7 @@
         }
 
         function create() {
+            keyE = game.input.keyboard.addKey(Phaser.Keyboard.E);
             empezar = 11;
             //  A simple background for our game
             this.add.image(400, 300, 'sky');
@@ -173,6 +175,7 @@
             if (cursors.up.isDown && player.body.touching.down) {
                 player.setVelocityY(-330);
             }
+
         }
 
         function collectStar(player, star) {
